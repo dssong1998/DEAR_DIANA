@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/DEAR_DIANA/static/css/main.a8b03b81.css",
-    "main.js": "/DEAR_DIANA/static/js/main.2edbea38.js",
+    "main.js": "/DEAR_DIANA/static/js/main.639b217d.js",
     "index.html": "/DEAR_DIANA/index.html",
     "main.a8b03b81.css.map": "/DEAR_DIANA/static/css/main.a8b03b81.css.map",
-    "main.2edbea38.js.map": "/DEAR_DIANA/static/js/main.2edbea38.js.map"
+    "main.639b217d.js.map": "/DEAR_DIANA/static/js/main.639b217d.js.map"
   },
   "entrypoints": [
     "static/css/main.a8b03b81.css",
-    "static/js/main.2edbea38.js"
+    "static/js/main.639b217d.js"
   ]
 }
