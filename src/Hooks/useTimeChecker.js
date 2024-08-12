@@ -11,6 +11,6 @@ const useTimeChecker = (targetTime, setYet) => {
     };
     const timerID = setInterval(checkTime, 1000);
     return () => clearInterval(timerID);
-  }, [setYet]);
+  }, [setYet, targetTime]);
 };
 export default useTimeChecker;

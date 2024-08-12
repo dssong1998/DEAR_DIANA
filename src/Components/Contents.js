@@ -8,8 +8,5 @@ const ImgComponent = styled.img`
 `;
 
 export const FullImg = ({ src, alt }) => (
-  <ImgComponent
-    src={`https://dssong1998.github.io/DEAR_DIANA${src}`}
-    alt={alt}
-  />
+  <ImgComponent src={`https://boogibooks.com/assets${src}`} alt={alt} />
 );
