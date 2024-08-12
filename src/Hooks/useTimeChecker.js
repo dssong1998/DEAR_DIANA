@@ -5,7 +5,7 @@ const useTimeChecker = (targetTime, setYet) => {
     const checkTime = () => {
       const cTime = new Date();
       const mm_ss = `${cTime.getHours()}:${cTime.getMinutes()}`;
-      if (mm_ss >= "21:40") {
+      if (mm_ss >= targetTime) {
         setYet(false);
       }
     };
