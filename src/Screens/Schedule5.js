@@ -21,7 +21,7 @@ const Schedule5 = ({ setPick, setSchedule, setDisp }) => {
             setDisp(9);
           }}
         >
-          <FullImg src="/image/S5A1.jpeg" alt="walk" />
+          <FullImg src="/image/S5A1.jpeg" alt="stay" />
           <SelectBtn>
             <AnsText>{"숙소로 가자 !"}</AnsText>
           </SelectBtn>
@@ -34,7 +34,7 @@ const Schedule5 = ({ setPick, setSchedule, setDisp }) => {
             setDisp(9);
           }}
         >
-          <FullImg src="/image/S5A2.jpeg" alt="eat" />
+          <FullImg src="/image/S5A2.jpeg" alt="more" />
           <SelectBtn>
             <AnsText>{"한군데만 더..!"}</AnsText>
           </SelectBtn>

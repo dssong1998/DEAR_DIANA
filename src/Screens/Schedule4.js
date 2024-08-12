@@ -21,7 +21,7 @@ const Schedule4 = ({ setPick, setSchedule, setDisp }) => {
             setDisp(9);
           }}
         >
-          <FullImg src="/image/S4A1.jpeg" alt="walk" />
+          <FullImg src="/image/S4A1.jpeg" alt="tea" />
           <SelectBtn>
             <AnsText>{"녹차밭 좋다 !"}</AnsText>
           </SelectBtn>
@@ -34,7 +34,7 @@ const Schedule4 = ({ setPick, setSchedule, setDisp }) => {
             setDisp(9);
           }}
         >
-          <FullImg src="/image/S4A2.jpeg" alt="eat" />
+          <FullImg src="/image/S4A2.jpeg" alt="activity" />
           <SelectBtn>
             <AnsText>{"액티비티 할래 !"}</AnsText>
           </SelectBtn>
@@ -47,7 +47,7 @@ const Schedule4 = ({ setPick, setSchedule, setDisp }) => {
             setDisp(9);
           }}
         >
-          <FullImg src="/image/S4A3.jpeg" alt="gallery" />
+          <FullImg src="/image/S4A3.jpeg" alt="bookshop" />
           <SelectBtn>
             <AnsText>{"책방 가자 !"}</AnsText>
           </SelectBtn>

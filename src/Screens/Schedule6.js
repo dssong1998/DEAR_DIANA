@@ -21,13 +21,13 @@ const Schedule6 = ({ setPick, setSchedule, setDisp }) => {
             setDisp(9);
           }}
         >
-          <FullImg src="/image/S6A1.jpeg" alt="walk" />
+          <FullImg src="/image/S6A1.jpeg" alt="sunset" />
           <SelectBtn>
             <AnsText>{"노을 보러 가자 !"}</AnsText>
           </SelectBtn>
         </Answer>
         <Answer>
-          <FullImg src="/image/S6A2.jpeg" alt="eat" />
+          <FullImg src="/image/S6A2.jpeg" alt="movie" />
           <SelectBtn
             onClick={() => {
               SaveStates(9, 6, 2);
