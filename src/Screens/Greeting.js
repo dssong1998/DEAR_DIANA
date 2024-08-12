@@ -10,7 +10,7 @@ import { SchedulesObjs } from "../Components/Contents/ScheduleData";
 
 const Greeting = ({ setDisp }) => {
   const [yet, setYet] = useState(true);
-  useTimeChecker(SchedulesObjs[0].time, setYet);
+  useTimeChecker(SchedulesObjs[1].time, setYet);
 
   return (
     <Container>
