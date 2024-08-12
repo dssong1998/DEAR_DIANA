@@ -5,11 +5,12 @@ import { Schedule1Text } from "../Components/Contents/ScheduleText";
 import { FullImg } from "../Components/Contents";
 import { SelectBtn } from "../Components/Buttons";
 import SaveStates from "../Utils/SaveStates";
+import { SchedulesObjs } from "../Components/Contents/ScheduleData";
 
 const Schedule1 = ({ setPick, setSchedule, setDisp }) => {
   return (
     <Container>
-      <Title>첫번째 일정 | 08:30</Title>
+      <Title>{SchedulesObjs[1]?.title}</Title>
       <Text>{Schedule1Text}</Text>
       <Options>
         <Answer

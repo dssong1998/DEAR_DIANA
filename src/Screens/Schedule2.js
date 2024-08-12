@@ -19,7 +19,7 @@ const Schedule2 = ({ pick, setPick, setSchedule, setDisp }) => {
   }
   return (
     <Container>
-      <Title>{SchedulesObjs[1].title}</Title>
+      <Title>{SchedulesObjs[2].title}</Title>
       <Text>{hasEat ? Schedule2_1Text : Schedule2_2Text}</Text>
       <Options>
         {hasEat ? (

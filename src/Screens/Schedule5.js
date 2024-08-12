@@ -10,7 +10,7 @@ import SaveStates from "../Utils/SaveStates";
 const Schedule5 = ({ setPick, setSchedule, setDisp }) => {
   return (
     <Container>
-      <Title>{SchedulesObjs[4].title}</Title>
+      <Title>{SchedulesObjs[5].title}</Title>
       <Text>{Schedule5Text}</Text>
       <Options>
         <Answer

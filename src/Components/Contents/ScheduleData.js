@@ -1,4 +1,5 @@
 export const SchedulesObjs = [
+  { title: "여행의 시 | 07:00", time: "07:00" },
   { title: "첫번째 일정 | 08:30", time: "08:30" },
   { title: "두번째 일정 | 11:00", time: "11:00" },
   { title: "세번째 일정 | 12:00", time: "12:00" },

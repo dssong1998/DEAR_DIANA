@@ -27,7 +27,7 @@ import SaveStates from "../Utils/SaveStates";
 
 const Pick = ({ pick, schedule, setDisp }) => {
   const [yet, setYet] = useState(true);
-  useTimeChecker(SchedulesObjs[schedule].time, setYet);
+  useTimeChecker(SchedulesObjs[schedule + 1]?.time, setYet);
   const TextDatas = [
     [Pick1_1Text, Pick1_2Text, Pick1_3Text],
     [Pick2_1Text, Pick2_2Text, Pick2_3Text],
@@ -38,12 +38,12 @@ const Pick = ({ pick, schedule, setDisp }) => {
   ];
   return (
     <Container>
-      <Title>{SchedulesObjs[schedule - 1].title}</Title>
+      <Title>{SchedulesObjs[schedule].title}</Title>
       <FullImg src={`/image/S${schedule}A${pick}.jpeg`} alt="pickimg" />
       <Text>{TextDatas[schedule - 1][pick - 1]}</Text>
       {yet ? (
         <DisabledBtn>
-          다음 일정 {SchedulesObjs[schedule]?.time || "00:00"}
+          다음 일정 {SchedulesObjs[schedule + 1]?.time || "00:00"}
         </DisabledBtn>
       ) : schedule === 6 ? (
         <NextBtn
@@ -61,7 +61,7 @@ const Pick = ({ pick, schedule, setDisp }) => {
             setDisp(schedule + 1);
           }}
         >
-          다음 일정 {SchedulesObjs[schedule]?.time || "00:00"}
+          다음 일정 {SchedulesObjs[schedule + 1]?.time || "00:00"}
         </NextBtn>
       )}
     </Container>

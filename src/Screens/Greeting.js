@@ -6,14 +6,15 @@ import { FullImg } from "../Components/Contents";
 import { DisabledBtn, NextBtn } from "../Components/Buttons";
 import useTimeChecker from "../Hooks/useTimeChecker";
 import SaveStates from "../Utils/SaveStates";
+import { SchedulesObjs } from "../Components/Contents/ScheduleData";
 
 const Greeting = ({ setDisp }) => {
   const [yet, setYet] = useState(true);
-  useTimeChecker("07:00", setYet);
+  useTimeChecker(SchedulesObjs[0].time, setYet);
 
   return (
     <Container>
-      <Title>여행의 시작 | 07:00</Title>
+      <Title>{SchedulesObjs[0]?.title}</Title>
       <Text>{GreetingText}</Text>
       <FullImg src="/image/Greeting.jpeg" alt="Greeting" />
       {yet ? (
