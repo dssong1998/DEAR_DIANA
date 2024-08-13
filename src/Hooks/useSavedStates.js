@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 
-const useSavedStates = (setDispState, setSchedule, setPickedOpt) => {
+const useSavedStates = (setDispState, setSchedule, setPickedOpt, setDone) => {
   return useEffect(() => {
     setDispState(parseInt(localStorage.getItem("display")));
     setSchedule(parseInt(localStorage.getItem("schedule")));
     setPickedOpt(parseInt(localStorage.getItem("pick")));
-  }, [setDispState, setSchedule, setPickedOpt]);
+    setDone(JSON.parse(localStorage.getItem("done")));
+  }, [setDispState, setSchedule, setPickedOpt, setDone]);
 };
 export default useSavedStates;

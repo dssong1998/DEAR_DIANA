@@ -7,4 +7,6 @@ export const SchedulesObjs = [
   { title: "다섯번째 일정 | 15:30", time: "15:30" },
   { title: "여행 마무리 | 16:00", time: "16:00" },
   { title: "나의 연인, 나의 다인", time: "16:00" },
+  { title: "야식 시간 | 19:30", time: "19:30" },
+  { title: "여행 종료", time: "00:00" },
 ];

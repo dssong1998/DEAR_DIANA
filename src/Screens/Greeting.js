@@ -26,7 +26,7 @@ const Greeting = ({ setDisp }) => {
             setDisp(1);
           }}
         >
-          첫번째 일정 | 08:30
+          {SchedulesObjs[1]?.title}
         </NextBtn>
       )}
     </Container>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Birthday from "./Screens/Birthday";
 import Greeting from "./Screens/Greeting";
 import Pick from "./Screens/Pick";
@@ -9,12 +9,28 @@ import Schedule4 from "./Screens/Schedule4";
 import Schedule5 from "./Screens/Schedule5";
 import Schedule6 from "./Screens/Schedule6";
 import useSavedStates from "./Hooks/useSavedStates";
+import useTimeChecker from "./Hooks/useTimeChecker";
+import Snack from "./Screens/Snack";
 
 function Home() {
   const [dispState, setDispState] = useState(0);
   const [schedule, setSchedule] = useState(0);
   const [pickedOpt, setPickedOpt] = useState(0);
-  useSavedStates(setDispState, setSchedule, setPickedOpt);
+  const [before330, setBefore330] = useState(true);
+  const [done, setDone] = useState(false);
+  useSavedStates(setDispState, setSchedule, setPickedOpt, setDone);
+  useTimeChecker("15:30", setBefore330);
+  useEffect(() => {
+    if (!done && !before330 && dispState === 9 && schedule < 5) {
+      if (
+        window.confirm(
+          "15시 30분이 지났어!\n\n마지막 일정으로 건너뛰어도 될까 ?"
+        )
+      ) {
+        setDispState(5);
+      }
+    }
+  }, [before330, dispState, schedule, done]);
 
   switch (dispState) {
     case 0:
@@ -69,10 +85,30 @@ function Home() {
         />
       );
     case 7:
-      return <Birthday setDisp={setDispState} />;
+      return (
+        <Birthday
+          setDisp={setDispState}
+          pick={pickedOpt}
+          setSchedule={setSchedule}
+        />
+      );
+    case 8:
+      return (
+        <Snack
+          setPick={setPickedOpt}
+          setSchedule={setSchedule}
+          setDisp={setDispState}
+        />
+      );
     case 9:
       return (
-        <Pick pick={pickedOpt} schedule={schedule} setDisp={setDispState} />
+        <Pick
+          pick={pickedOpt}
+          schedule={schedule}
+          setDisp={setDispState}
+          setSchedule={setSchedule}
+          setDone={setDone}
+        />
       );
 
     default:
