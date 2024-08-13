@@ -52,7 +52,11 @@ const Pick = ({ pick, schedule, setDisp, setSchedule, setDone }) => {
   return (
     <Container>
       <Title>{SchedulesObjs[schedule].title}</Title>
-      <FullImg src={`/image/S${schedule}A${pick}.jpeg`} alt="pickimg" />
+      {schedule === 9 ? (
+        <FullImg src={`/image/birthday.jpeg`} alt="pickimg" />
+      ) : (
+        <FullImg src={`/image/S${schedule}A${pick}.jpeg`} alt="pickimg" />
+      )}
       <Text>{TextDatas[schedule - 1][pick - 1]}</Text>
       {schedule <= 8 ? (
         yet ? (
