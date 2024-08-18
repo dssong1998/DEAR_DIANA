@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 const useSavedStates = (setDispState, setSchedule, setPickedOpt, setDone) => {
   return useEffect(() => {
-    setDispState(parseInt(localStorage.getItem("display")));
+    setDispState(99);
     setSchedule(parseInt(localStorage.getItem("schedule")));
     setPickedOpt(parseInt(localStorage.getItem("pick")));
     setDone(JSON.parse(localStorage.getItem("done")));

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 
-const useTimeChecker = (targetTime, setYet) => {
+const useTimeChecker = (a, setYet) => {
+  const targetTime = "00:00";
   return useEffect(() => {
     const checkTime = () => {
       const cTime = new Date();

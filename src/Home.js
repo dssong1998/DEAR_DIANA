@@ -11,9 +11,10 @@ import Schedule6 from "./Screens/Schedule6";
 import useSavedStates from "./Hooks/useSavedStates";
 import useTimeChecker from "./Hooks/useTimeChecker";
 import Snack from "./Screens/Snack";
+import Final from "./Screens/Final";
 
 function Home() {
-  const [dispState, setDispState] = useState(0);
+  const [dispState, setDispState] = useState(99);
   const [schedule, setSchedule] = useState(0);
   const [pickedOpt, setPickedOpt] = useState(0);
   const [before330, setBefore330] = useState(true);
@@ -110,6 +111,8 @@ function Home() {
           setDone={setDone}
         />
       );
+    case 99:
+      return <Final setDisp={setDispState} />;
 
     default:
       return <Greeting setDisp={setDispState} />;
