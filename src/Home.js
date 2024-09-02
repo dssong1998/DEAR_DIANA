@@ -21,17 +21,17 @@ function Home() {
   const [done, setDone] = useState(false);
   useSavedStates(setDispState, setSchedule, setPickedOpt, setDone);
   useTimeChecker("15:30", setBefore330);
-  useEffect(() => {
-    if (!done && !before330 && dispState === 9 && schedule < 5) {
-      if (
-        window.confirm(
-          "15시 30분이 지났어!\n\n마지막 일정으로 건너뛰어도 될까 ?"
-        )
-      ) {
-        setDispState(5);
-      }
-    }
-  }, [before330, dispState, schedule, done]);
+  // useEffect(() => {
+  //   if (!done && !before330 && dispState === 9 && schedule < 5) {
+  //     if (
+  //       window.confirm(
+  //         "15시 30분이 지났어!\n\n마지막 일정으로 건너뛰어도 될까 ?"
+  //       )
+  //     ) {
+  //       setDispState(5);
+  //     }
+  //   }
+  // }, [before330, dispState, schedule, done]);
 
   switch (dispState) {
     case 0:
